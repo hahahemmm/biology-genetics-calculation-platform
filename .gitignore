@@ -1,0 +1,126 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Widget Preview related
+.widget_preview/
+
+.tmp_*
+
+test/failures/
+
+.tmp_*
+_tmp_*
+
+backup_*.zip
+biology_v*.zip
+*_share.zip
+
+# Distribution staging dir (解压出来的 apk + windows 副本，给收件人用，不入仓)
+biology_v*/
+
+_tr*.old
+_*.bak
+*.bak
+# 临时调试目录，不追踪
+_trash_debug_*/
+
+# 本地临时记录文件（_*.txt / _*.log / _*.md），不入仓。
+_*.txt
+_*.log
+_*.md
+
+# v2.11 L1：M11a 等 fix 实施时的临时对照文件（条件导入占位 / pre diff）
+_tmp_*.dart
+_verify_*.dart
+
+# 网盘同步在仓库根目录产生的上传残留（网盘同步还会锁 build 文件）。
+*.baiduyun.uploading.cfg
+
+# 根目录 _ 前缀临时研究产物（python/ps1/对照图/参考 json），不入库
+_*.py
+_*.ps1
+_*.png
+# 例外：课标页色板基准图是测试必需基线，必须以 _ 开头（测试里写死了文件名），
+# 不能因为通配规则被排除，否则新克隆的仓库跑 golden 测试会缺图直接失败。
+!/test/goldens/_v21k_curriculum_*.png
+_ref_*.json
+
+# v2.20.0：本地 dart-define 文件（真实 API key 放这里，绝不入仓）。
+# 模板见 dart_defines.example.json；跑法：
+#   flutter run --dart-define-from-file=dart_defines.local.json
+# ⚠️ 仅限开发 / 内部受控构建：dart-define 的值会被 AOT 编译进二进制，
+#    release 包同样能读出来（可提取），**不是**安全存储。对外发布的包
+#    不得内嵌真实 key——正式路径是用户在设置页自填的本机加密配置。
+/dart_defines.local.json
+
+# Windows 实窗口体验官截图与隔离偏好（integration_test/knowledge_experience_test.dart）
+/.experience/
+
+# ── 2026-11-08 仓库卫生：工具产物与第三方副本不入仓 ──────────────────
+# reference/ 是本地参考副本，不是本应用源码。
+/reference/
+
+# 根目录 _* 与 .*.txt 是历史排查日志/临时输出，已停止跟踪（见本次提交）。
+# ⛔ 例外：test/ 下的 _tmp_present_scan_test.dart 是长期回归测试，不能忽略。
+/_*
+/.*_out.txt
+/.*_hash_*.txt
+/analyze_out.txt
+/analyze_out*.txt
+/flutter_*.log
+/build_*.log
+/.test_out.txt
+/backup_1.0_artifacts.bak/
+
+# 本机私有资料（第三方 API Key / 个人笔记），绝不入库
+/.local/
+
+# 已移出版本库的补丁残留（文件仍在磁盘，属个人调试过程，不再跟踪）
+/tool/*.bak
+/tool/_probe*.py
+/tools/kimi-daimon.sh
+# 本机工作区索引（含本机路径，不得入库）
+WORKSPACE_INDEX.md

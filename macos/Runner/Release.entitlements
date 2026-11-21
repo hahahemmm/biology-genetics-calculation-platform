@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- AI 通道（MiniMax / DeepSeek）与知识库实时检索都需要出站网络。
+	     缺这条时 release 包会被沙盒静默断网，全部 AI 功能失效。 -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+</dict>
+</plist>

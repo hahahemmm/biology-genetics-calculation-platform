@@ -1,0 +1,19 @@
+name: Feature request
+description: 提出一个功能建议
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的教学场景
+      description: 描述具体的使用场景，而不只是"希望有 X 功能"
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 建议的做法
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 你考虑过的替代方案

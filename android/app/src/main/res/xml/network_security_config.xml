@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  v2.12 网络安全配置（Web 拍题 canvas-to-blob 抓图 + AI API 调用）。
+
+  base-config：release 默认禁止 cleartext（http:// URL 一律拒绝），
+  强制 AI 后端走 https://，杜绝明文 token 泄露。
+  debug-overrides：debug 构建由 Android framework 自动启用，
+  允许 cleartext 方便本地 http://10.0.2.2:8000 等热重载场景。
+  profile 构建同样不继承 debug 行为（严格遵循 base-config），
+  保证混淆/灰度包也走 https。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

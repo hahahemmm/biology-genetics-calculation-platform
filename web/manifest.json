@@ -1,0 +1,36 @@
+{
+    "name": "biology",
+    "short_name": "biology",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#5C7265",
+    "theme_color": "#5C7265",
+    "lang": "zh-CN",
+    "description": "Biology 跨平台生物学习软件——高考课标全覆盖，遗传图谱/9331/真题练习/分子进化多工具 + AI 解析",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

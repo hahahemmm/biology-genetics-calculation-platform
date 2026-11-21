@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- v2.13 R4-2（P1-2 EACCES 修复配套）：FileProvider 暴露范围。
+     files-path 根 = Context.getFilesDir()（/data/data/<pkg>/files）。
+     v2.13 R4f（P2-1 · 四轮重审 Fix）：暴露范围收窄——此前 path="."
+     把整个应用专属目录（错题 JSON、本地设置等其他 files 下内容）都暴露
+     给任意分享目标。实际导出/分享文件全部落在 userAppDir() =
+     <filesDir>/.biology_app/（错题 JSON / 板书 PNG / board_history 归档 /
+     Pictures/Biology板书），收窄到该子树即可满足分享链路。 -->
+<paths>
+    <files-path name="biology_app" path=".biology_app/" />
+</paths>
