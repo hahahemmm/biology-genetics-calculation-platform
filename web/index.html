@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="生物遗传计算平台——高考课标全覆盖，遗传图谱/9331/真题练习/分子进化多工具 + AI 解析">
+
+  <!-- v2.12: 主题色与品牌色 #5C7265（灰豆绿 Sage）一致；Safari 地址栏 / Chrome 标签底色 / 桌面 PWA 标题栏同步。 -->
+  <meta name="theme-color" content="#5C7265">
+  <!-- 深色模式主题色——跟随系统 prefers-color-scheme 切到 #212420（= AppColors.canvasD，theme.dart:95）。原值 #232523 是旧版 canvasD，已随 v2.22 中性族改色过期；两边不一致会让深色浏览器 chrome 与页面底色差一档。 -->
+  <meta name="theme-color" content="#212420" media="(prefers-color-scheme: dark)">
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="biology">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>生物遗传计算平台</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+
+  <!-- v2.12: 无 JS 兜底提示（无障碍 / SEO 双需求）。 -->
+  <noscript>
+    <div style="padding:32px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;color:#35322C;background:#FBF9F5;line-height:1.6;">
+      <h1 style="font-size:20px;margin:0 0 12px;">请启用 JavaScript</h1>
+      <p style="margin:0;font-size:14px;color:#5D594F;">
+        Biology 跨平台生物学习软件需要 JavaScript 才能运行计算引擎、AI 解析与画布交互。请在浏览器设置中开启 JavaScript 后刷新页面。
+      </p>
+    </div>
+  </noscript>
+</body>
+</html>
